@@ -227,6 +227,7 @@ button {
   letter-spacing: 0.03em;
   transition: 0.3s;
   cursor: pointer;
+  box-shadow: 0 25px 25px var(--paleorange);
 }
 
 button img {
