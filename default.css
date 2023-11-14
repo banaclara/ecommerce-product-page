@@ -40,7 +40,7 @@ header {
 .headleft a {
   text-decoration: none;
   color: var(--darkgrayishblue);
-  padding: 0 16px;
+  margin: 0 16px;
   position: relative;
   transition: 0.2s;
 }
@@ -51,10 +51,10 @@ header {
 
 .headleft a::after {
   content: "";
-  width: 65%;
+  width: 100%;
   position: absolute;
   top: 67px;
-  left: 19%;
+  left: 0;
   transform-origin: center;
 }
 
@@ -68,7 +68,8 @@ header {
 }
 
 .headright svg {
-  padding-right: 45px;
+  margin-right: 45px;
+  cursor: pointer;
 }
 
 .headright svg:hover {
@@ -77,6 +78,7 @@ header {
 
 .avatar {
   width: 50px;
+  cursor: pointer;
 }
 
 .avatar:hover {
@@ -205,6 +207,7 @@ h1 {
 
 .quantity svg {
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .quantity svg:hover {
@@ -223,6 +226,7 @@ button {
   font-size: 1em;
   letter-spacing: 0.03em;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 button img {
