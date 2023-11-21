@@ -12,36 +12,41 @@
 * {
   font-family: "Kumbh Sans", sans-serif;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-size: 0.95em;
+  max-width: 1440px;
+  font-size: 16px;
 }
 
 /* header */
 
 header {
   display: flex;
-  border-bottom: 1px solid var(--grayishblue);
+  width: 77%;
+  border-bottom: 1px solid #E4E9F2;
   align-items: center;
   justify-content: space-between;
-  margin: 0 85px 0 70px;
+  margin: 0 auto;
   padding: 28px 0 34px;
 }
 
 .headleft {
   display: flex;
+  font-size: 0.94em;
 }
 
 .headleft img {
-  padding-right: 39px;
+  margin-right: 24px;
 }
 
 .headleft a {
   text-decoration: none;
   color: var(--darkgrayishblue);
-  margin: 0 16px;
+  margin-left: 32px;
   position: relative;
+  letter-spacing: 0.15px;
   transition: 0.2s;
 }
 
@@ -53,13 +58,13 @@ header {
   content: "";
   width: 100%;
   position: absolute;
-  top: 67px;
+  top: 66px;
   left: 0;
   transform-origin: center;
 }
 
 .headleft a:hover::after {
-  border-bottom: 3px solid var(--orange);
+  border-bottom: 4px solid var(--orange);
 }
 
 .headright {
@@ -67,12 +72,12 @@ header {
   align-items: center;
 }
 
-.headright svg {
+.headright .cart {
   margin-right: 45px;
   cursor: pointer;
 }
 
-.headright svg:hover {
+.headright .cart:hover {
   filter: brightness(0);
 }
 
@@ -91,13 +96,11 @@ header {
 main {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 90px;
 }
 
 .product {
   max-width: 445px;
-  padding-right: 75px;
 }
 
 .product .principal {
@@ -119,59 +122,63 @@ main {
 }
 
 .thumbnails img:hover {
-  filter: opacity(0.6);
+  opacity: 0.5;
 }
 
 .selectedthumbnail {
+  opacity: 0.2;
+  position: relative;
+  top: -28px;
+}
+
+.thmborder {
+  margin-top: 28px;
+  height: 88px;
   outline: 2px solid var(--orange);
-  filter: opacity(0.4);
+  border-radius: 10px;
 }
 
 .description {
   max-width: 445px;
-  padding-left: 50px;
-  padding-right: 15px;
+  margin-left: 125px;
 }
 
 h3 {
   color: var(--orange);
   text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
-  margin-bottom: 20px;
+  font-size: 0.82em;
+  letter-spacing: 0.12em;
+  margin-top: 62px;
 }
 
 h1 {
-  font-size: 2.9em;
-  margin-bottom: 35px;
-  line-height: 1.08em;
+  font-size: 2.75em;
+  margin: 19px 0 34px;
+  line-height: 1.1em;
 }
 
 .description > p {
-  margin: 10px 0;
   color: var(--darkgrayishblue);
-  line-height: 1.6em;
-  margin-bottom: 25px;
-  font-size: 1.05em;
+  line-height: 1.65em;
+  margin-bottom: 24px;
 }
 
 .discount {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .price {
-  font-size: 1.9em;
+  font-size: 1.75em;
   font-weight: 700;
-  padding-right: 15px;
-  letter-spacing: 0.02em;
+  margin-right: 18px;
+  letter-spacing: 0.03em;
 }
 
 .percent {
   background-color: var(--paleorange);
   color: var(--orange);
-  font-size: 1.04em;
   font-weight: 700;
   padding: 4px 9px;
   border-radius: 5px;
@@ -181,8 +188,7 @@ h1 {
   color: var(--grayishblue);
   font-weight: 700;
   text-decoration: line-through;
-  font-size: 1.1em;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 }
 
 .tobuy {
@@ -195,23 +201,22 @@ h1 {
   background-color: var(--lightgrayishblue);
   display: flex;
   align-items: center;
-  padding: 19px 17px;
+  padding: 18px 17px;
   border-radius: 10px;
 }
 
 .quantity > p {
   padding: 0 45px;
   font-weight: 700;
-  font-size: 1em;
 }
 
-.quantity svg {
+.quantity img {
   transition: 0.3s;
   cursor: pointer;
 }
 
-.quantity svg:hover {
-  filter: opacity(0.4);
+.quantity img:hover {
+  opacity: 0.4;
 }
 
 button {
@@ -219,24 +224,25 @@ button {
   align-items: center;
   border: none;
   border-radius: 10px;
-  padding: 19px 77px;
+  padding: 19px 76px;
   background-color: var(--orange);
   color: white;
   font-weight: 700;
-  font-size: 1em;
-  letter-spacing: 0.03em;
+  font-size: 0.94em;
+  letter-spacing: 0.04em;
   transition: 0.3s;
   cursor: pointer;
-  box-shadow: 0 25px 25px var(--paleorange);
+  box-shadow: 0 25px 20px var(--paleorange);
 }
 
 button img {
   width: 17px;
-  padding-right: 15px;
+  margin-right: 15px;
+  filter: brightness(4);
 }
 
 button:hover {
-  filter: opacity(0.4);
+  opacity: 0.4;
 }
 
 .attribution {
