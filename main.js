@@ -1,7 +1,7 @@
 function changeImage(thumbnail) {
-  var principalImage = document.querySelector(".product .principal");
+  let principalImage = document.querySelector(".product .principal");
 
-  var thumbnails = document.querySelectorAll(".thumbnails img");
+  let thumbnails = document.querySelectorAll(".thumbnails img");
 
   thumbnails.forEach(function (otherThumbnail) {
     otherThumbnail.classList.remove("selectedthumbnail");
@@ -13,7 +13,7 @@ function changeImage(thumbnail) {
 }
 
 function border(thumbnail) {
-  var thumbBorder = document.querySelectorAll(".thmb");
+  let thumbBorder = document.querySelectorAll(".thmb");
 
   thumbBorder.forEach(function (container) {
     container.classList.remove("thmborder");
@@ -21,3 +21,19 @@ function border(thumbnail) {
 
   thumbnail.classList.add("thmborder");
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  let productQuantity = document.querySelector(".qvalue");
+  const plus = document.getElementById("plus");
+  const minus = document.getElementById("minus");
+  
+  plus.onclick = function () {
+    productQuantity.textContent++;
+  };
+
+  minus.onclick = function () {
+    if (productQuantity.textContent > 0) {
+      productQuantity.textContent--;
+    }
+  };
+});

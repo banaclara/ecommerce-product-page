@@ -101,6 +101,7 @@ main {
 
 .product {
   max-width: 445px;
+  margin-right: 124px;
 }
 
 .product .principal {
@@ -140,7 +141,7 @@ main {
 
 .description {
   max-width: 445px;
-  margin-left: 125px;
+  padding-left: 1px;
 }
 
 h3 {
@@ -188,25 +189,26 @@ h1 {
   color: var(--grayishblue);
   font-weight: 700;
   text-decoration: line-through;
-  margin-bottom: 36px;
+  margin-bottom: 37px;
 }
 
 .tobuy {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
 }
 
 .quantity {
   background-color: var(--lightgrayishblue);
   display: flex;
   align-items: center;
-  padding: 18px 17px;
+  justify-content: space-between;
+  padding: 0 16px;
   border-radius: 10px;
+  width: 157px;
+  height: 3.53em;
 }
 
 .quantity > p {
-  padding: 0 45px;
   font-weight: 700;
 }
 
@@ -222,9 +224,10 @@ h1 {
 button {
   display: flex;
   align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 10px;
-  padding: 19px 76px;
+  width: 271px;
   background-color: var(--orange);
   color: white;
   font-weight: 700;
@@ -242,7 +245,7 @@ button img {
 }
 
 button:hover {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .attribution {
