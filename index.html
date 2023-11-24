@@ -17,12 +17,18 @@
 
     <header>
       <div class="headleft">
-        <img src="images/logo.svg" alt="" />
+        <div class="menu">
+          <img src="images/icon-menu.svg" alt="menu" class="menu-icon" id="hamburguer">
+          <img src="images/icon-close.svg" alt="close menu" class="close-menu" id="close-icon">
+        </div>
+        <img src="images/logo.svg" alt="logo" class="logo"/>
+        <nav class="menu-links">
         <a href="">Collections</a>
         <a href="">Men</a>
         <a href="">Women</a>
         <a href="">About</a>
         <a href="">Contact</a>
+        </nav>
       </div>
 
       <div class="headright">
@@ -34,40 +40,36 @@
     <main>
       <div class="product">
         <img src="images/icon-previous.svg" class="previous" id="previous">
-        <img src="images/image-product-1.jpg" alt="" class="principal" />
         <img src="images/icon-next.svg" alt="next" class="next">
+        <img src="images/image-product-1.jpg" alt="" class="principal" />
         <div class="thumbnails">
           <div class="thmb thmborder" onclick="border(this)">
             <img
               src="images/image-product-1-thumbnail.jpg"
               alt=""
               data-src="images/image-product-1.jpg"
-              onclick="changeImage(this)" class="selectedthumbnail"
-            />
+              onclick="changeImage(this)" class="selectedthumbnail" />
           </div>
           <div class="thmb" onclick="border(this)">
           <img
             src="images/image-product-2-thumbnail.jpg"
             alt=""
             data-src="images/image-product-2.jpg"
-            onclick="changeImage(this)"
-          />
+            onclick="changeImage(this)" />
           </div>
           <div class="thmb" onclick="border(this)">
           <img
             src="images/image-product-3-thumbnail.jpg"
             alt=""
             data-src="images/image-product-3.jpg"
-            onclick="changeImage(this)"
-          />
+            onclick="changeImage(this)" />
           </div>
           <div class="thmb" onclick="border(this)">
           <img
             src="images/image-product-4-thumbnail.jpg"
             alt=""
             data-src="images/image-product-4.jpg"
-            onclick="changeImage(this)"
-          />
+            onclick="changeImage(this)" />
           </div>
         </div>
       </div>
@@ -91,9 +93,9 @@
 
         <div class="tobuy">
           <div class="quantity">
-            <img src="/images/icon-minus.svg" alt="remove item" id="minus">
+            <img src="images/icon-minus.svg" alt="remove item" id="minus">
             <p class="qvalue">0</p>
-            <img src="/images/icon-plus.svg" alt="add item" id="plus">
+            <img src="images/icon-plus.svg" alt="add item" id="plus">
           </div>
           <button>
             <img src="images/icon-cart.svg" alt="cart icon" />
@@ -104,12 +106,8 @@
     </main>
 
     <footer class="attribution">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6"
-        target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="github.com/banaclara">Ana Clara Barros</a>.
+      Challenge by <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6"
+        target="_blank">Frontend Mentor</a>. Coded by <a href="github.com/banaclara">Ana Clara Barros</a>.
     </footer>
     
   </body>

@@ -1,6 +1,5 @@
 function changeImage(thumbnail) {
   let principalImage = document.querySelector(".product .principal");
-
   let thumbnails = document.querySelectorAll(".thumbnails img");
 
   thumbnails.forEach(function (otherThumbnail) {
