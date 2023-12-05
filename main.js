@@ -1,4 +1,4 @@
-function changeImage(thumbnail, event) {
+function changeImage(thumbnail) {
   const principalImage = document.querySelector(".product .principal");
   const thumbnails = document.querySelectorAll(".thumbnails img");
   const thumbBorders = document.querySelectorAll(".thmb");
@@ -15,8 +15,6 @@ function changeImage(thumbnail, event) {
   thumbnail.classList.add("thmborder");
 
   principalImage.src = thumbnail.querySelector("img").getAttribute("data-src");
-
-  event.stopPropagation();
 }
 
 
