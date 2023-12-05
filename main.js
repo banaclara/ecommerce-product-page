@@ -1,28 +1,27 @@
-function changeImage(thumbnail) {
-  let principalImage = document.querySelector(".product .principal");
-  let thumbnails = document.querySelectorAll(".thumbnails img");
+function changeImage(thumbnail, event) {
+  const principalImage = document.querySelector(".product .principal");
+  const thumbnails = document.querySelectorAll(".thumbnails img");
+  const thumbBorders = document.querySelectorAll(".thmb");
 
   thumbnails.forEach(function (otherThumbnail) {
     otherThumbnail.classList.remove("selectedthumbnail");
   });
 
-  thumbnail.classList.add("selectedthumbnail");
-
-  principalImage.src = thumbnail.getAttribute("data-src");
-}
-
-function border(thumbnail) {
-  let thumbBorder = document.querySelectorAll(".thmb");
-
-  thumbBorder.forEach(function (container) {
+  thumbBorders.forEach(function (container) {
     container.classList.remove("thmborder");
   });
 
+  thumbnail.querySelector("img").classList.add("selectedthumbnail");
   thumbnail.classList.add("thmborder");
+
+  principalImage.src = thumbnail.querySelector("img").getAttribute("data-src");
+
+  event.stopPropagation();
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
-  let productQuantity = document.querySelector(".qvalue");
+  const productQuantity = document.querySelector(".qvalue");
   const plus = document.getElementById("plus");
   const minus = document.getElementById("minus");
   
